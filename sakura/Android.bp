@@ -1,6 +1,6 @@
 /**
- * Copyright (C) 2020 The LineageOS Project
- * Copyright (C) 2020 The PixelExperience Project
+ * Copyright (C) 2019-2020 The LineageOS Project
+ * Copyright (C) 2019-2020 The PixelExperience Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -129,38 +129,6 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libts_detected_face_hal",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libts_detected_face_hal.so"],
-		},
-	},
-	compile_multilib: "32",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libts_face_beautify_hal",
-	owner: "xiaomi",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libts_face_beautify_hal.so"],
-		},
-	},
-	compile_multilib: "32",
 	prefer: true,
 	soc_specific: true,
 }
@@ -325,18 +293,6 @@ android_app_import {
 	},
 	privileged: true,
 	product_specific: true,
-}
-
-dex_import {
-	name: "QPerformance",
-	owner: "xiaomi",
-	jars: ["proprietary/framework/QPerformance.jar"],
-}
-
-dex_import {
-	name: "UxPerformance",
-	owner: "xiaomi",
-	jars: ["proprietary/framework/UxPerformance.jar"],
 }
 
 dex_import {
